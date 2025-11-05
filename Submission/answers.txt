@@ -1,0 +1,17 @@
+Which recommendation strategy can you implement?
+
+- Customer-based co-occurrence from historical orders (implemented: /recs/{customer_id}).
+- Product-to-product co-purchase co-occurrence (implemented: /recs/product/{product_id}).
+- Category/behavior-based using VIEW/CLICK/ADD_TO_CART events (implemented: /recs/category/{customer_id}).
+- Optional graph algorithms with Neo4j GDS: item-item Jaccard similarity; Personalized PageRank seeded by a user’s interactions.
+
+What improvements would make this mini-project production ready?
+
+- Data pipeline: scheduled/idempotent ETL (or CDC), retries/backoff, event deduplication; schema migrations.
+- Configuration & secrets: per-environment config (.env), secret manager; distinct dev/staging/prod settings.
+- Observability: structured logs, metrics (API latency, Neo4j query time), tracing; slow-query logging and dashboards.
+- API hardening: Pydantic response models, input validation, pagination, consistent errors, OpenAPI examples; caching and rate limiting.
+- Neo4j: tuned constraints/indexes, parameterized Cypher everywhere, GDS pipelines for similarity, backup/restore and data retention plan.
+- Testing & CI/CD: unit/integration tests (dockerized), seed-based fixtures, load tests; automated lint/type checks and deployments.
+- Security: authN/Z for APIs, least-privileged DB accounts, network policies; vulnerability scanning of images.
+
