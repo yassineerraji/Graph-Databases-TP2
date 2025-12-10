@@ -1,4 +1,4 @@
-# TD1 — Graph Recs (Neo4j + Postgres + FastAPI)
+# TP2 — Graph Recs (Neo4j + Postgres + FastAPI)
 
 ## Run
 ```bash
